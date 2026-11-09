@@ -1,0 +1,33 @@
+Tue 27 Oct 12:24:02 UTC 2026
+Starting gem5 atomic mode...
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+build/RISCV/mem/mem_interface.cc:785: warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+build/RISCV/sim/kernel_workload.cc:43: info: kernel located at: /data/users/aditya/keystone/build/sm.build/platform/generic/firmware/fw_payload.elf
+build/RISCV/base/statistics.hh:271: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any Stats::Group. Legacy stat is deprecated.
+      0: system.platform.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+build/RISCV/dev/serial/terminal.cc:167: warn: Sockets disabled, not accepting terminal connections
+build/RISCV/base/remote_gdb.cc:376: warn: Sockets disabled, not accepting gdb connections
+build/RISCV/mem/coherent_xbar.cc:137: warn: CoherentXBar system.cpu.mmucache.mmubus has no snooping ports attached!
+build/RISCV/arch/riscv/linux/fs_workload.cc:47: info: Loading DTB file: m5out/device.dtb at address 0x87e00000
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version [DEVELOP-FOR-V21.1]
+gem5 compiled Oct  8 2026 16:53:31
+gem5 started Oct 27 2026 12:24:03
+gem5 executing on sealvivado, pid 2128250
+command line: gem5/build/RISCV/gem5.opt configs-keystone-default/run_hsm.py /data/users/aditya/keystone/build/sm.build/platform/generic/firmware/fw_payload.elf /data/users/aditya/keystone/build/buildroot.build/images/rootfs.ext2 atomic 1
+
+info: Standard input is not a terminal, disabling listeners.
+Running Keystone HSM simulation in gem5...
+build/RISCV/sim/simulate.cc:104: info: Entering event queue @ 0.  Starting simulation...
+build/RISCV/dev/riscv/vio_mmio.cc:210: warn: Ignoring queue resize hint. Requested size: 128
+build/RISCV/arch/riscv/locked_mem.hh:123: warn: 65865095973: context 0: 10000 consecutive SC failures.
+Driver loaded! Starting Keystone HSM PKCS#11 test suite...
+build/RISCV/sim/simulate.cc:104: info: Entering event queue @ 79378556319.  Starting simulation...
+Keystone HSM test suite completed successfully!
+Dumping stats...
+Simulated time: 0.05s
+GEM5_EXIT_RC=0
+Tue 27 Oct 12:32:17 UTC 2026

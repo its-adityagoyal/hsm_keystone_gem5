@@ -1,0 +1,28 @@
+# Server credentials - never commit
+askpass.bat
+
+# Personal/internal notes
+CLAUDE.md
+Extra/
+
+# LaTeX build artifacts
+23EC3AI20_BTP_Report/*.aux
+23EC3AI20_BTP_Report/*.log
+23EC3AI20_BTP_Report/*.toc
+23EC3AI20_BTP_Report/*.out
+23EC3AI20_BTP_Report/*.pdf
+23EC3AI20_BTP_Report/*.fls
+23EC3AI20_BTP_Report/*.fdb_latexmk
+23EC3AI20_BTP_Report/*.synctex.gz
+23EC3AI20_BTP_Report/*.blg
+23EC3AI20_BTP_Report/*.bbl
+
+# VS Code
+.vscode/
+
+# IIT KGP template (reference only, not our work)
+IIT_Kgp_Thesis_Template/
+
+# OS
+.DS_Store
+Thumbs.db

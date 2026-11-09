@@ -1,0 +1,182 @@
+[    0.000000] OF: fdt: Ignoring memory range 0x80000000 - 0x80200000
+[    0.000000] Linux version 5.7.0-dirty (aditya@sealvivado) (gcc version 10.2.0 (GCC), GNU ld (GNU Binutils) 2.35) #1 SMP Tue Sep 8 16:21:56 UTC 2026
+[    0.000000] initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000080200000-0x00000000bfffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080200000-0x00000000bfffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080200000-0x00000000bfffffff]
+[    0.000000] cma: Reserved 512 MiB at 0x000000009f000000
+[    0.000000] software IO TLB: mapped [mem 0x9b000000-0x9f000000] (64MB)
+[    0.000000] SBI specification v0.2 detected
+[    0.000000] SBI implementation ID=0x1 Version=0x8
+[    0.000000] SBI v0.2 TIME extension detected
+[    0.000000] SBI v0.2 IPI extension detected
+[    0.000000] SBI v0.2 RFENCE extension detected
+[    0.000000] SBI v0.2 HSM extension detected
+[    0.000000] riscv: ISA extensions acdfimsu
+[    0.000000] riscv: ELF capabilities acdfim
+[    0.000000] percpu: Embedded 17 pages/cpu s31784 r8192 d29656 u69632
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258055
+[    0.000000] Kernel command line: console=ttyS0 root=/dev/vda ro cma=512M@0-4G
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] Sorting __ex_table...
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 423224K/1046528K available (6486K kernel code, 4184K rwdata, 4096K rodata, 235K init, 318K bss, 99016K reserved, 524288K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]       fixmap : 0xffffffcefee00000 - 0xffffffceff000000   (2048 kB)
+[    0.000000]       pci io : 0xffffffceff000000 - 0xffffffcf00000000   (  16 MB)
+[    0.000000]      vmemmap : 0xffffffcf00000000 - 0xffffffcfffffffff   (4095 MB)
+[    0.000000]      vmalloc : 0xffffffd000000000 - 0xffffffdfffffffff   (65535 MB)
+[    0.000000]       lowmem : 0xffffffe000000000 - 0xffffffe03fe00000   (1022 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=1.
+[    0.000000] rcu: 	RCU debug extended QS entry/exit.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 0, nr_irqs: 0, preallocated irqs: 0
+[    0.000000] plic: mapped 10 interrupts with 1 handlers for 2 contexts.
+[    0.000000] riscv_timer_init_dt: Registering clocksource cpuid [0] hartid [0]
+[    0.000000] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+[    0.000014] sched_clock: 64 bits at 10MHz, resolution 100ns, wraps every 4398046511100ns
+[    0.000253] Console: colour dummy device 80x25
+[    0.000292] Calibrating delay loop (skipped), value calculated using timer frequency.. 20.00 BogoMIPS (lpj=40000)
+[    0.000329] pid_max: default: 32768 minimum: 301
+[    0.000681] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.000720] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.002983] rcu: Hierarchical SRCU implementation.
+[    0.003379] smp: Bringing up secondary CPUs ...
+[    0.003401] smp: Brought up 1 node, 1 CPU
+[    0.003922] devtmpfs: initialized
+[    0.005204] random: get_random_u32 called from bucket_table_alloc.isra.0+0x4e/0x154 with crng_init=0
+[    0.005588] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.005633] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.030812] NET: Registered protocol family 16
+[    0.060283] vgaarb: loaded
+[    0.060954] SCSI subsystem initialized
+[    0.061584] usbcore: registered new interface driver usbfs
+[    0.061689] usbcore: registered new interface driver hub
+[    0.061777] usbcore: registered new device driver usb
+[    0.063138] clocksource: Switched to clocksource riscv_clocksource
+[    0.075352] NET: Registered protocol family 2
+[    0.076442] tcp_listen_portaddr_hash hash table entries: 512 (order: 2, 20480 bytes, linear)
+[    0.076543] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.076909] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.077832] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.077989] UDP hash table entries: 512 (order: 3, 49152 bytes, linear)
+[    0.078159] UDP-Lite hash table entries: 512 (order: 3, 49152 bytes, linear)
+[    0.078521] NET: Registered protocol family 1
+[    0.079178] RPC: Registered named UNIX socket transport module.
+[    0.079198] RPC: Registered udp transport module.
+[    0.079217] RPC: Registered tcp transport module.
+[    0.079237] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.079260] PCI: CLS 0 bytes, default 64
+[    0.080320] workingset: timestamp_bits=62 max_order=18 bucket_order=0
+[    0.102218] NFS: Registering the id_resolver key type
+[    0.102282] Key type id_resolver registered
+[    0.102300] Key type id_legacy registered
+[    0.102334] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.102549] 9p: Installing v9fs 9p2000 file system support
+[    0.103269] NET: Registered protocol family 38
+[    0.103338] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.103359] io scheduler mq-deadline registered
+[    0.103378] io scheduler kyber registered
+[    0.206667] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.208981] printk: console [ttyS0] disabled
+[    0.209035] 10000000.uart: ttyS0 at MMIO 0x10000000 (irq = 1, base_baud = 230400) is a 8250
+[    0.212530] printk: console [ttyS0] enabled
+[    0.213485] [drm] radeon kernel modesetting enabled.
+[    0.227649] loop: module loaded
+[    0.228075] virtio_blk virtio0: [vda] 122880 512-byte logical blocks (62.9 MB/60.0 MiB)
+[    0.228144] vda: detected capacity change from 0 to 62914560
+[    0.231795] libphy: Fixed MDIO Bus: probed
+[    0.233382] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    0.233429] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.233654] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.233704] ehci-pci: EHCI PCI platform driver
+[    0.233809] ehci-platform: EHCI generic platform driver
+[    0.233933] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.233995] ohci-pci: OHCI PCI platform driver
+[    0.234104] ohci-platform: OHCI generic platform driver
+[    0.234640] usbcore: registered new interface driver uas
+[    0.234778] usbcore: registered new interface driver usb-storage
+[    0.235035] mousedev: PS/2 mouse device common for all mice
+[    0.235864] usbcore: registered new interface driver usbhid
+[    0.235908] usbhid: USB HID core driver
+[    0.237630] NET: Registered protocol family 10
+[    0.239108] Segment Routing with IPv6
+[    0.239317] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.240462] NET: Registered protocol family 17
+[    0.240954] 9pnet: Installing 9P2000 support
+[    0.241096] Key type dns_resolver registered
+[    0.242903] EXT4-fs (vda): mounting ext2 file system using the ext4 subsystem
+[    0.245334] EXT4-fs (vda): mounted filesystem without journal. Opts: (null)
+[    0.245434] VFS: Mounted root (ext2 filesystem) readonly on device 254:0.
+[    0.245665] devtmpfs: mounted
+[    0.245914] Freeing unused kernel memory: 232K
+[    0.251320] Run /sbin/init as init process
+[    0.273298] EXT4-fs (vda): warning: mounting unchecked fs, running e2fsck is recommended
+[    0.273436] EXT4-fs (vda): re-mounted. Opts: (null)
+Starting syslogd: OK
+Starting klogd: [    0.394493] random: fast init done
+OK
+Running sysctl: OK
+Initializing random number generator: OK
+Saving random seed: [    0.553913] random: dd: uninitialized urandom read (512 bytes read)
+OK
+Starting dropbear sshd: OK
+[    0.657049] keystone_driver: loading out-of-tree module taints kernel.
+[    0.666784] keystone_enclave: keystone enclave v1.0.0
+
+============================================================
+   KEYSTONE RISC-V HARDWARE SECURITY MODULE (HSM) SUITE     
+   PKCS #11 Verification running on Keystone Enclave / gem5 
+============================================================
+
+[1] Initializing Keystone Enclave Service (eapp=hsm-eapp, rt=eyrie-rt)...
+[0;32m[PASS] Keystone Enclave booted and ready!
+[0m    Cryptoki Version: 2.40
+    Manufacturer ID : IIT Kharagpur BTP Keystone HSM
+    Library Desc    : RISC-V Enclave Hardware Sec Mod
+
+[Test 1] Generating 256-bit AES Key in Enclave...
+[0;32m  -> SUCCESS: Key stored inside Enclave RAM. Key Handle = 0x1001
+[0m  -> [Security Check] Raw key material NEVER exposed to host!
+
+[Test 2] AES-256 CBC Encryption (PKCS#7 Padding)...
+  Plaintext: "IIT-Kgp Keystone Enclave HSM Protected Top Secret 2026!" (55 bytes)
+  Ciphertext: f9da89a157476e8d045d434603d56c5470a29806cdc437adacd7a8f12b856b0a5d2c5d02f3f5258de03ce7a7ea569ecf78c2e07bad7ab2aad70939908f20c5ca (64 bytes)
+[0;32m  -> SUCCESS: Encrypted under Enclave isolation
+[0m
+[Test 3] AES-256 CBC Decryption...
+  Decrypted: "IIT-Kgp Keystone Enclave HSM Protected Top Secret 2026!" (55 bytes)
+[0;32m  -> SUCCESS: Decrypted text matches original plaintext!
+[0m
+[Test 4] SHA-256 Hashing inside Enclave...
+  SHA-256 Digest: 9a7b8fbe353e1889317f4515a872b8350a74d6219f758d745d91efd6fe2afcd1 (32 bytes)
+[0;32m  -> SUCCESS: SHA-256 calculated inside enclave boundary
+[0m
+[Test 5] HMAC-SHA256 Key Gen and Message Authentication...
+  HMAC Key Handle = 0x1002 generated.
+  HMAC Signature: 67b7cefdd629d51f18707ccd671114b2b73243d6844530bde591ac21a0999b82 (32 bytes)
+[0;32m  -> SUCCESS: HMAC generated with Key Handle 0x1002
+[0m
+[Test 6] HMAC Signature Verification & Tamper Detection...
+[0;32m  -> Valid signature: VERIFIED (PASS)
+[0m
+[Test 7] Security Boundary Check: Invalid Handle Rejection...
+[0;32m  -> SUCCESS: Enclave rejected forged handle 0xDEADBEEF with HSM_STATUS_ERR_INVALID_HANDLE
+[0m
+[Test 8] Secure Key Destruction (Zeroization)...
+  Key 0x1001 destroyed and zeroized in enclave memory.
+[0;32m  -> SUCCESS: Enclave confirms destroyed key handle is invalid!
+[0m
+============================================================
+   TEST SUITE SUMMARY: 8/8 TESTS PASSED (100%)
+============================================================
+
+Keystone Enclave exited with return code: 0
