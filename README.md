@@ -28,21 +28,28 @@ A freestanding **Hardware Security Module (HSM)** running inside a [Keystone TEE
 ## Architecture
 
 ```
-┌───────────────────────────── Host (Linux, RISC-V) ─────────────────────────────┐
-│  test_pkcs11_hsm.c  ──PKCS#11 calls──►  pkcs11_keystone.c                      │
-│                                               │                                 │
-│                                        hsm_host_bridge.cpp                      │
-│                                   (enclave lifecycle + pthread sync)             │
-└───────────────────────────────────────────────┼────────────────────────────────┘
-                                                │  OCALL_HSM_DISPATCH = 5
-                            ════════════ PMP Security Boundary ════════════
-┌───────────────────────── Enclave (Keystone + Eyrie runtime) ───────────────────┐
-│                              hsm_eapp.c                                         │
-│                     (dispatch loop over 64 KB shared buffer)                    │
-│                                                                                 │
-│   key_store.c        crypto_aes.c       crypto_sha256.c      crypto_prng.c     │
-│  (64-slot table)   (AES-256 CBC)       (SHA-256 + HMAC)    (SHA-256 DRBG)      │
-└────────────────────────────────────────────────────────────────────────────────┘
++---------------------------  Host (Linux, RISC-V)  ----------------------------+
+|                                                                                |
+|  test_pkcs11_hsm.c  --[PKCS#11 calls]-->  pkcs11_keystone.c                   |
+|                                                   |                            |
+|                                          hsm_host_bridge.cpp                   |
+|                                     (enclave lifecycle + pthread sync)          |
++---------------------------------------------------+----------------------------+
+                                                    |
+                                        OCALL_HSM_DISPATCH = 5
+                                        (64 KB shared buffer)
+                                                    |
+                              ===== PMP Security Boundary =====
+                                                    |
++------------------  Enclave (Keystone + Eyrie runtime)  -----------------------+
+|                                                                                |
+|                            hsm_eapp.c                                         |
+|                   (secure dispatch loop, hsm_req_t/hsm_resp_t)                |
+|                                                                                |
+|   key_store.c     crypto_aes.c    crypto_sha256.c    crypto_prng.c            |
+|   (64 key slots)  (AES-256 CBC)   (SHA-256 + HMAC)   (SHA-256 DRBG)           |
+|                                                                                |
++--------------------------------------------------------------------------------+
 ```
 
 ---
